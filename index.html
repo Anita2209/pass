@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Generate a Random Password</h2>
+        <div class="result">
+            <span class="result-text" id="result22"></span>
+            <div class="button-group">
+                <button class="btn" id="clipboard">
+                    <i class="far fa-clipboard"></i>
+                </button>
+                <button class="btn" id="toggleVisibility">
+                    <i class="far fa-eye"></i>
+                </button>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="set">
+                <label>Password length</label>
+                <input type="number" id="length" min="5" max="30" value="12" />
+            </div>
+            <div class="set">
+                <label>Include uppercase</label>
+                <input type="checkbox" id="uppercase" checked/>
+            </div>
+            <div class="set">
+                <label>Include lowercase</label>
+                <input type="checkbox" id="lowercase" checked/>
+            </div>
+            <div class="set">
+                <label>Include symbols</label>
+                <input type="checkbox" id="symbols" checked/>
+            </div>
+            <div class="set">
+                <label>Include numbers</label>
+                <input type="checkbox" id="numbers" checked/>
+            </div>
+        </div>
+        <button class="btn btn-large" id="generator">Generate Password</button>
+        <div class="strength-meter">
+            <div class="strength-bar" id="strength-bar"></div>
+        </div>
+        <button class="btn btn-large" id="addPasswordBtn">Save Password</button>
+        <div class="collapsible-section">
+            <button class="collapsible">Password Manager</button>
+            <div class="collapsible-content">
+                <ul id="passwordList"></ul>
+            </div>
+        </div>
+        <div class="collapsible-section">
+            <button class="collapsible">Password History</button>
+            <div class="collapsible-content">
+                <ul id="historyList"></ul>
+            </div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <div class="theme-switcher">
+        <span>Light</span>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Dark</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
